@@ -4,44 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3b3622f-7fa2-404b-8e1e-e02249ad8f28" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/Starter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/DashboardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/InformationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/PromptButtonCell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/data/ArticleData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/data/ArticleLink.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/data/RecentReading.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/data/TableData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/data/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/datagetter/DataGetter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/datagetter/JsonDataGetter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/datagetter/UserDataHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/display/DragAndDropWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/libs/fontawesomefx-8.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/libs/gson-2.10.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/notification/ErrorNotification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/notification/InformationNotification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/notification/Notifiable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/newsaggregator/article-information.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/newsaggregator/dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/newsaggregator/dashboard.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/newsaggregator/data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/newsaggregator/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/newsaggregator/login.fxml" afterDir="false" />
+    <list default="true" id="e3b3622f-7fa2-404b-8e1e-e02249ad8f28" name="Changes" comment="Great work">
+      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/DashboardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/creator/Creator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/creator/HomeSectionCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/creator/NewsSectionCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/creator/SearchSectionCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/creator/StatisticSectionCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/TrendFinder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/trendPackage/DataExtract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/trendPackage/TagRecognition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/trendPackage/TrendData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/trendPackage/pairPackage/Pair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/trendPackage/pairPackage/PairArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/trendPackage/pairPackage/pairComparator/CompareProperty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/trendPackage/pairPackage/pairComparator/CompareValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/trendPackage/timeDisplayer/HalfYearRange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/trendPackage/timeDisplayer/TimeDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/DashboardController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/PromptButtonCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/PromptButtonCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/datagetter/JsonDataGetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/datagetter/JsonDataGetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/datagetter/UserDataHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/datagetter/UserDataHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/notification/InformationNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/notification/InformationNotification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/newsaggregator/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/newsaggregator/dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/newsaggregator/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/newsaggregator/data.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +51,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;06babyshark06&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/06babyshark06/NewAggregator.git&quot;,
+    &quot;accountId&quot;: &quot;8cdb2413-e1b0-4dcd-a9a6-c0d3609c52d8&quot;
+  }
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -73,42 +75,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.NewsAggregator.executor": "Run",
-    "Application.Starter.executor": "Run",
-    "Application.TestJson.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ADMIN/IdeaProjects/MyPerfectProject/src/main/java/newsaggregator/libs/gson-2.10.1.jar",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.NewsAggregator.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Starter.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TestJson.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TrendFinder.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ADMIN/IdeaProjects/MyPerfectProject/src/main/resources/newsaggregator&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "CSS"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;CSS&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ADMIN\IdeaProjects\MyPerfectProject\src\main\resources\newsaggregator" />
+      <recent name="C:\Users\ADMIN\IdeaProjects\MyPerfectProject\src\main\java\newsaggregator\controller\trend" />
       <recent name="C:\Users\ADMIN\IdeaProjects\MyPerfectProject\src\main\java\newsaggregator\libs" />
       <recent name="C:\Users\ADMIN\IdeaProjects\MyPerfectProject\src\main\java\newsaggregator" />
     </key>
@@ -170,8 +174,21 @@
       <workItem from="1716257818279" duration="3504000" />
       <workItem from="1716304855961" duration="9643000" />
       <workItem from="1716360027321" duration="746000" />
-      <workItem from="1716388204391" duration="3030000" />
+      <workItem from="1716388204391" duration="13620000" />
+      <workItem from="1716403263052" duration="336000" />
+      <workItem from="1716427131202" duration="7599000" />
+      <workItem from="1716459399426" duration="2768000" />
+      <workItem from="1716467075319" duration="751000" />
     </task>
+    <task id="LOCAL-00001" summary="First">
+      <option name="closed" value="true" />
+      <created>1716392196214</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716392196214</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,5 +204,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First" />
+    <MESSAGE value="Second" />
+    <MESSAGE value="Great work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Great work" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

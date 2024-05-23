@@ -61,8 +61,8 @@ public class LoginController implements Initializable {
         new InformationNotification().showMessage("Welcome " + user.getUsername()+", check your Internet connection to use all the feature available in this application");
         loginButton.getScene().getWindow().hide();
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/newsaggregator/dashboard.fxml"));
             new RecentReading().getRecentReadingFromUser(user);
+            Parent root = FXMLLoader.load(getClass().getResource("/newsaggregator/dashboard.fxml"));
             new DragAndDropWindow().displayStage(root, new Stage());
         } catch (IOException e) {
             e.printStackTrace();

@@ -1,6 +1,8 @@
 package newsaggregator.datagetter;
 
 import com.google.gson.Gson;
+import javafx.collections.ObservableList;
+import newsaggregator.data.TableData;
 import newsaggregator.notification.ErrorNotification;
 import newsaggregator.data.User;
 
@@ -9,7 +11,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 
-public class UserDataHandler {
+public class UserDataHandler{
     public static List<User> users = new ArrayList<User>();
 
     public void writeObjectToFile() {

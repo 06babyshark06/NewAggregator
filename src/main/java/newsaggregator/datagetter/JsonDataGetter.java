@@ -44,12 +44,9 @@ public class JsonDataGetter implements DataGetter {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             new ErrorNotification().showMessage("Could not find data file or something went wrong");
-        } catch (IOException e) {
+        } catch (IOException | ParseException e) {
             e.printStackTrace();
             new ErrorNotification().showMessage("Something went wrong when reading data file");
-        } catch (ParseException e) {
-            e.printStackTrace();
-            new ErrorNotification().showMessage("Something went wrong when we reading data file");
         }
         return listTableData;
     }
