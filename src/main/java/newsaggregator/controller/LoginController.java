@@ -8,11 +8,11 @@ import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
-import newsaggregator.data.User;
-import newsaggregator.data.filereader.UserDataHandler;
+import newsaggregator.data.user.User;
+import newsaggregator.data.user.UserDataHandler;
 import newsaggregator.notification.ErrorNotification;
 import newsaggregator.display.DragAndDropWindow;
-import newsaggregator.data.RecentReading;
+import newsaggregator.data.article.RecentReading;
 import newsaggregator.notification.InformationNotification;
 
 import java.io.IOException;

@@ -4,35 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3b3622f-7fa2-404b-8e1e-e02249ad8f28" name="Changes" comment="Great work">
-      <change afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/creator/AboutSectionCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/Starter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/creator/HomeSectionCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/creator/HomeSectionCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/creator/NewsSectionCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/creator/NewsSectionCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/creator/StatisticSectionCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/creator/StatisticSectionCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/TrendFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/TrendFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/trendPackage/DataExtract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/DataExtract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/trendPackage/TagRecognition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/TagRecognition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/trendPackage/TrendData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/TrendData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/trendPackage/pairPackage/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/pairdata/Pair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/trendPackage/pairPackage/PairArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/pairdata/PairArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/trendPackage/pairPackage/pairComparator/CompareProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/pairdata/CompareProperty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/trendPackage/pairPackage/pairComparator/CompareValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/pairdata/CompareValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/trendPackage/timeDisplayer/HalfYearRange.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/trend/trendPackage/timeDisplayer/TimeDisplay.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/data/ArticleData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/data/ArticleData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/data/RecentReading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/data/RecentReading.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/data/TableData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/data/TableData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/data/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/data/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/datagetter/DataGetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/data/filereader/DataGetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/datagetter/JsonDataGetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/data/filereader/JsonDataGetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/datagetter/UserDataHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/data/filereader/UserDataHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/newsaggregator/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/newsaggregator/dashboard.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="e3b3622f-7fa2-404b-8e1e-e02249ad8f28" name="Changes" comment="Thank" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -180,7 +152,7 @@
       <workItem from="1716459399426" duration="2768000" />
       <workItem from="1716467075319" duration="859000" />
       <workItem from="1716482395883" duration="7287000" />
-      <workItem from="1716528651061" duration="1043000" />
+      <workItem from="1716528651061" duration="1254000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <option name="closed" value="true" />
@@ -198,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716467906584</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Thank">
+      <option name="closed" value="true" />
+      <created>1716529729693</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716529729693</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,7 +199,8 @@
     <MESSAGE value="First" />
     <MESSAGE value="Second" />
     <MESSAGE value="Great work" />
-    <option name="LAST_COMMIT_MESSAGE" value="Great work" />
+    <MESSAGE value="Thank" />
+    <option name="LAST_COMMIT_MESSAGE" value="Thank" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -12,8 +12,8 @@ import javafx.scene.control.Pagination;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.VBox;
 import newsaggregator.controller.dashboard.PromptButtonCell;
-import newsaggregator.data.ArticleLink;
-import newsaggregator.data.TableData;
+import newsaggregator.data.article.ArticleLink;
+import newsaggregator.data.article.TableData;
 
 import java.util.ArrayList;
 import java.util.Collections;

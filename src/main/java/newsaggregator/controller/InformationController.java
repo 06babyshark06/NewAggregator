@@ -7,8 +7,8 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import newsaggregator.data.RecentReading;
-import newsaggregator.data.TableData;
+import newsaggregator.data.article.RecentReading;
+import newsaggregator.data.article.TableData;
 
 import java.net.URL;
 import java.util.ResourceBundle;

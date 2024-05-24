@@ -1,8 +1,7 @@
-package newsaggregator.data.filereader;
+package newsaggregator.data.user;
 
 import com.google.gson.Gson;
 import newsaggregator.notification.ErrorNotification;
-import newsaggregator.data.User;
 
 import java.io.*;
 import java.nio.file.Path;

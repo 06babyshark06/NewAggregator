@@ -1,4 +1,4 @@
-package newsaggregator.data;
+package newsaggregator.data.article;
 
 public class ArticleData {
     private String url;

@@ -9,8 +9,8 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TitledPane;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
-import newsaggregator.data.RecentReading;
-import newsaggregator.data.TableData;
+import newsaggregator.data.article.RecentReading;
+import newsaggregator.data.article.TableData;
 import newsaggregator.notification.ErrorNotification;
 
 import java.awt.*;

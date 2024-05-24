@@ -1,4 +1,4 @@
-package newsaggregator.data;
+package newsaggregator.data.article;
 
 import javafx.scene.control.Hyperlink;
 import newsaggregator.notification.ErrorNotification;

@@ -12,9 +12,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseButton;
 import javafx.stage.Stage;
-import newsaggregator.data.ArticleLink;
-import newsaggregator.data.RecentReading;
-import newsaggregator.data.TableData;
+import newsaggregator.data.article.ArticleLink;
+import newsaggregator.data.article.RecentReading;
+import newsaggregator.data.article.TableData;
 import newsaggregator.display.DragAndDropWindow;
 import newsaggregator.notification.ErrorNotification;
 

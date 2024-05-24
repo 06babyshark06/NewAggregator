@@ -1,7 +1,6 @@
-package newsaggregator.data.filereader;
+package newsaggregator.data.article;
 
 import javafx.collections.ObservableList;
-import newsaggregator.data.TableData;
 
 public interface DataGetter {
     ObservableList<TableData> getData(String file);

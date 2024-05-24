@@ -1,10 +1,8 @@
-package newsaggregator.data.filereader;
+package newsaggregator.data.article;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import newsaggregator.notification.ErrorNotification;
-import newsaggregator.data.ArticleData;
-import newsaggregator.data.TableData;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;

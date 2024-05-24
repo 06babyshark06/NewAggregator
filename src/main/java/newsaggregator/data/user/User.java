@@ -1,4 +1,6 @@
-package newsaggregator.data;
+package newsaggregator.data.user;
+
+import newsaggregator.data.article.ArticleData;
 
 import java.util.List;
 

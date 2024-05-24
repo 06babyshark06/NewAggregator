@@ -1,4 +1,4 @@
-package newsaggregator.data;
+package newsaggregator.data.article;
 
 public class TableData extends ArticleData implements Comparable<TableData> {
     public ArticleLink link;
