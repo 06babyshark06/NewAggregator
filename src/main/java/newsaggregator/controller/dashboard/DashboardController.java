@@ -161,7 +161,7 @@ public class DashboardController implements Initializable {
     ObservableList<TableData> dataList = new JsonDataGetter().getData(filePath);
     ObservableList<TableData> afterSortDataList = dataList;
     ObservableList<TitledPane> recentArticles = FXCollections.observableArrayList();
-    private final double articlesPerPage = Math.ceil(dataList.size() * 1.0 / 100);
+    private final double articlesPerPage = Math.ceil(dataList.size() * 1.0 / 200);
     NewsSectionCreator newsSectionCreator = null;
     StatisticSectionCreator statisticSectionCreator = null;
     TrendFinder finder = new TrendFinder(filePath);
