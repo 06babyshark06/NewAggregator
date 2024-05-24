@@ -177,7 +177,7 @@ public class DashboardController implements Initializable {
     }
 
     public void close() {
-        User user = new RecentReading().getUser();
+        User user = RecentReading.getUser();
         user.setRecentReadings(new RecentReading().setRecentReadingFromUser());
         UserDataHandler.getUsers().add(user);
         new UserDataHandler().updateUserState();
@@ -187,7 +187,7 @@ public class DashboardController implements Initializable {
 
     public void logout() throws IOException {
         logoutBtn.getScene().getWindow().hide();
-        User user = new RecentReading().getUser();
+        User user = RecentReading.getUser();
         user.setRecentReadings(new RecentReading().setRecentReadingFromUser());
         UserDataHandler.getUsers().add(user);
         new UserDataHandler().updateUserState();
@@ -255,7 +255,7 @@ public class DashboardController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        username.setText(new RecentReading().getUser().getUsername());
+        username.setText(RecentReading.getUser().getUsername());
         engine = displayArticleWebview.getEngine();
         newsSectionCreator = new NewsSectionCreator(articlesPerPage, sortOption, sortYear, sortTag, dataList, newsPages, afterSortDataList);
         newsSectionCreator.create();

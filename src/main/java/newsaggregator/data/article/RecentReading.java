@@ -10,15 +10,15 @@ public class RecentReading {
     private static Stack<TableData> recentList;
     private static User user;
 
-    public User getUser() {
+    public static User getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public static void setUser(User user) {
         RecentReading.user = user;
     }
 
-    public Stack<TableData> getRecentList() {
+    public static Stack<TableData> getRecentList() {
         return recentList;
     }
 

@@ -63,7 +63,7 @@ public class HomeSectionCreator implements Creator {
     @Override
     public void create() {
         recentArticles = FXCollections.observableArrayList();
-        Stack<TableData> recentReadingList = new RecentReading().getRecentList();
+        Stack<TableData> recentReadingList = RecentReading.getRecentList();
         for (int i = recentReadingList.size() - 1; i >= 0; i--) {
             TableData article = recentReadingList.get(i);
             TextArea description = new TextArea(article.getDescription());
