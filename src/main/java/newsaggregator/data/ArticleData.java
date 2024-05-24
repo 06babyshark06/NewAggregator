@@ -11,6 +11,18 @@ public class ArticleData {
     private String tag;
     private String author;
 
+    public ArticleData(String url, String web_url, String type, String description, String title, String content, String create_date, String tag, String author) {
+        this.url = url;
+        this.web_url = web_url;
+        this.type = type;
+        this.description = description;
+        this.title = title;
+        this.content = content;
+        this.create_date = create_date;
+        this.tag = tag;
+        this.author = author;
+    }
+
     public String getUrl() {
         return url;
     }
@@ -79,34 +91,7 @@ public class ArticleData {
         return author;
     }
 
-    public ArticleData(String url, String web_url, String type, String description, String title, String content, String create_date, String tag, String author) {
-        this.url = url;
-        this.web_url = web_url;
-        this.type = type;
-        this.description = description;
-        this.title = title;
-        this.content = content;
-        this.create_date = create_date;
-        this.tag = tag;
-        this.author = author;
-    }
-
     public void setAuthor(String author) {
         this.author = author;
-    }
-
-    @Override
-    public String toString() {
-        return "Data{" +
-                "url='" + url + '\'' +
-                ", web_url='" + web_url + '\'' +
-                ", type='" + type + '\'' +
-                ", description='" + description + '\'' +
-                ", title='" + title + '\'' +
-                ", content=" + content +
-                ", create_date='" + create_date + '\'' +
-                ", tag='" + tag + '\'' +
-                ", author='" + author + '\'' +
-                '}';
     }
 }

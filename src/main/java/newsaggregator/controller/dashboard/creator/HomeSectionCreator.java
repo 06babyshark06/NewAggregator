@@ -11,7 +11,12 @@ import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import newsaggregator.data.RecentReading;
 import newsaggregator.data.TableData;
+import newsaggregator.notification.ErrorNotification;
 
+import java.awt.*;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.Stack;
 
 public class HomeSectionCreator implements Creator {
@@ -39,6 +44,14 @@ public class HomeSectionCreator implements Creator {
         TitledPane pane = new TitledPane("", description);
         pane.setGraphic(title);
         title.setOnMouseClicked(event -> {
+            if (event.getClickCount()==2) {
+                try {
+                    Desktop.getDesktop().browse(new URI(article.getUrl()));
+                }
+                catch (URISyntaxException | IOException e) {
+                    new ErrorNotification().showMessage("Something went wrong while loading the article");
+                }
+            }
             displayArticleImage.setVisible(false);
             displayArticleWebview.setVisible(true);
             engine.load(article.getUrl());

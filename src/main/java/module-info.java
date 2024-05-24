@@ -14,8 +14,8 @@ module com.example.myperfectproject {
     opens newsaggregator.data to com.google.gson, javafx.fxml;
     exports newsaggregator.controller;
     opens newsaggregator.controller to com.google.gson, javafx.fxml;
-    exports newsaggregator.datagetter;
-    opens newsaggregator.datagetter to com.google.gson, javafx.fxml;
+    exports newsaggregator.data.filereader;
+    opens newsaggregator.data.filereader to com.google.gson, javafx.fxml;
     exports newsaggregator.notification;
     opens newsaggregator.notification to com.google.gson, javafx.fxml;
     exports newsaggregator.display;

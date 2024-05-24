@@ -1,4 +1,4 @@
-package newsaggregator.datagetter;
+package newsaggregator.data.filereader;
 
 import javafx.collections.ObservableList;
 import newsaggregator.data.TableData;

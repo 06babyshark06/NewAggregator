@@ -1,4 +1,4 @@
-package newsaggregator.controller.dashboard.trend.trendPackage.pairPackage;
+package newsaggregator.controller.dashboard.trend.pairdata;
 
 /**
  * Một cặp biểu diễn thuộc tính và giá trị của nó

@@ -1,4 +1,4 @@
-package newsaggregator.controller.dashboard.trend.trendPackage;
+package newsaggregator.controller.dashboard.trend;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -8,7 +8,7 @@ import java.util.List;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import newsaggregator.controller.dashboard.trend.trendPackage.pairPackage.*;
+import newsaggregator.controller.dashboard.trend.pairdata.*;
 
 public class DataExtract {
     private JSONArray jsonFile;
@@ -20,7 +20,7 @@ public class DataExtract {
     public PairArray dateExtract(String locatedWord) {
         PairArray dateAppearance = new PairArray();
         for (TrendData data : TagRecognition.webTagData) {
-            if (data.publishedDate == null||data.publishedDate.isEmpty()) continue;
+            if (data.publishedDate == null || data.publishedDate.isEmpty()) continue;
             if (data.publishedDate.contains("/")) continue;
             if (data.tagList.contains(locatedWord) == true) {
                 String date = data.publishedDate.substring(0, 10);

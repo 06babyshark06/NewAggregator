@@ -16,9 +16,8 @@ public class Starter extends Application {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
             stage.setTitle("News Aggregator");
-            new DragAndDropWindow().displayStage(root,stage);
-        }
-        catch (IOException e) {
+            new DragAndDropWindow().displayStage(root, stage);
+        } catch (IOException e) {
             new ErrorNotification().showMessage("Could not load login.fxml file or something went wrong");
         }
     }

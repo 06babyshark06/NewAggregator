@@ -4,14 +4,12 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import newsaggregator.controller.dashboard.trend.trendPackage.DataExtract;
-import newsaggregator.controller.dashboard.trend.trendPackage.TagRecognition;
-import newsaggregator.controller.dashboard.trend.trendPackage.timeDisplayer.HalfYearRange;
-import newsaggregator.controller.dashboard.trend.trendPackage.timeDisplayer.TimeDisplay;
+import newsaggregator.controller.dashboard.trend.timedisplayer.HalfYearRange;
+import newsaggregator.controller.dashboard.trend.timedisplayer.TimeDisplay;
 import org.json.simple.JSONArray;
 import org.json.simple.parser.*;
 
-import newsaggregator.controller.dashboard.trend.trendPackage.pairPackage.*;
+import newsaggregator.controller.dashboard.trend.pairdata.*;
 
 public class TrendFinder {
     private String outputFile;
@@ -77,15 +75,4 @@ public class TrendFinder {
         mostTrend = mostTrend.subList(0, findNumber); //cắt tỉa nốt để lấy các từ cần thiết
         return mostTrend;
     }
-
-
-    public static void main(String[] args) throws Exception {
-
-        TrendFinder trendFinder = new TrendFinder("src/main/resources/newsaggregator/data.json");
-
-        trendFinder.findMostTrending(14).printPair();
-        trendFinder.trendOverTime("Ethereum", 3).printPair();
-        trendFinder.extractedWeb().printPair();
-    }
-
 }

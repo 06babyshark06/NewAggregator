@@ -7,8 +7,8 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import newsaggregator.controller.dashboard.trend.TrendFinder;
-import newsaggregator.controller.dashboard.trend.trendPackage.pairPackage.Pair;
-import newsaggregator.controller.dashboard.trend.trendPackage.pairPackage.PairArray;
+import newsaggregator.controller.dashboard.trend.pairdata.Pair;
+import newsaggregator.controller.dashboard.trend.pairdata.PairArray;
 import newsaggregator.notification.ErrorNotification;
 import org.json.simple.parser.ParseException;
 
@@ -55,16 +55,12 @@ public class StatisticSectionCreator implements Creator{
         XYChart.Series series = new XYChart.Series();
         series.setName(keyword);
         PairArray list=finder.trendOverTime(keyword,3);
-        statisticTrend.setTitle(keyword);
+        statisticTrend.setTitle("Trend of "+keyword);
         for (int i=list.size()-1; i>=0; i--) {
             series.getData().add(new XYChart.Data(list.get(i).getProperty(),list.get(i).getValue()));
         }
         statisticTrend.getData().clear();
         statisticTrend.getData().add(series);
-    }
-    public void searchKeyword() {
-        String keyword=statisticSearch.getText();
-        showTrend(keyword);
     }
     @Override
     public void create() {

@@ -9,7 +9,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import newsaggregator.data.User;
-import newsaggregator.datagetter.UserDataHandler;
+import newsaggregator.data.filereader.UserDataHandler;
 import newsaggregator.notification.ErrorNotification;
 import newsaggregator.display.DragAndDropWindow;
 import newsaggregator.data.RecentReading;
@@ -48,17 +48,16 @@ public class LoginController implements Initializable {
 
     List<User> users;
     boolean isSignedUp = false;
-    boolean isRegistered = false;
 
-    public void signUp(String username, String password) {
+    private void signUp(String username, String password) {
         users.add(new User(username, password, new ArrayList<>()));
         new InformationNotification().showMessage("Sign Up Successfully");
-        new UserDataHandler().writeObjectToFile();
-        users = new UserDataHandler().readObjectFromFile();
+        new UserDataHandler().writeUsersToFile();
+        users = new UserDataHandler().readUsersFromFile();
     }
 
-    public void login(User user) {
-        new InformationNotification().showMessage("Welcome " + user.getUsername()+", check your Internet connection to use all the feature available in this application");
+    private void login(User user) {
+        new InformationNotification().showMessage("Welcome " + user.getUsername() + ", check your Internet connection to use all the feature available in this application");
         loginButton.getScene().getWindow().hide();
         try {
             new RecentReading().getRecentReadingFromUser(user);
@@ -80,22 +79,20 @@ public class LoginController implements Initializable {
                 if (user.getUsername().equals(usernameText)) {
                     if (!isSignedUp) {
                         if (user.getPassword().equals(passwordText)) login(user);
+                        else new ErrorNotification().showMessage("Please check your username and password");
                     } else {
-                        isRegistered = true;
                         new ErrorNotification().showMessage("This username has already been registered");
                     }
                     return;
                 }
             }
-            if (isSignedUp && !isRegistered) {
+            if (isSignedUp) {
                 signUp(usernameText, passwordText);
-                isRegistered=false;
-            }
-            else new ErrorNotification().showMessage("Please check your username and password");
+            } else new ErrorNotification().showMessage("Please check your username and password");
         }
     }
 
-    public void switchStatus(String oldValue, String newValue) {
+    private void switchState(String oldValue, String newValue) {
         isSignedUp = !isSignedUp;
         signInUp.setText(newValue);
         loginButton.setText(newValue);
@@ -104,9 +101,9 @@ public class LoginController implements Initializable {
 
     public void switchToSignInUp() {
         if (isSignedUp) {
-            switchStatus("Sign Up", "Login");
+            switchState("Sign Up", "Login");
         } else {
-            switchStatus("Login", "Sign Up");
+            switchState("Login", "Sign Up");
         }
     }
 
@@ -116,6 +113,6 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        users = new UserDataHandler().readObjectFromFile();
+        users = new UserDataHandler().readUsersFromFile();
     }
 }

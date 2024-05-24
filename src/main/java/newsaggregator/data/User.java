@@ -8,7 +8,6 @@ public class User {
     private List<ArticleData> recentReadings;
 
     public User() {
-
     }
 
     public User(String username, String password, List<ArticleData> recentReadings) {
@@ -39,14 +38,5 @@ public class User {
 
     public void setRecentReadings(List<ArticleData> recentReadings) {
         this.recentReadings = recentReadings;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", recentReadings=" + recentReadings +
-                '}';
     }
 }

@@ -1,8 +1,6 @@
-package newsaggregator.datagetter;
+package newsaggregator.data.filereader;
 
 import com.google.gson.Gson;
-import javafx.collections.ObservableList;
-import newsaggregator.data.TableData;
 import newsaggregator.notification.ErrorNotification;
 import newsaggregator.data.User;
 
@@ -11,14 +9,22 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 
-public class UserDataHandler{
-    public static List<User> users = new ArrayList<User>();
+public class UserDataHandler {
+    private static List<User> users = new ArrayList<User>();
 
-    public void writeObjectToFile() {
+    public static List<User> getUsers() {
+        return users;
+    }
+
+    public static void setUsers(List<User> users) {
+        UserDataHandler.users = users;
+    }
+
+    public void writeUsersToFile() {
         Path currentRelativePath = Paths.get("");
         String s = currentRelativePath.toAbsolutePath().toString();
         try {
-            FileWriter fileWriter=new FileWriter(s + "/src/main/resources/newsaggregator/users.txt",false);
+            FileWriter fileWriter = new FileWriter(s + "/src/main/resources/newsaggregator/users.txt", false);
             BufferedWriter writer = new BufferedWriter(fileWriter);
             Gson gson = new Gson();
             for (User user : users) {
@@ -35,14 +41,15 @@ public class UserDataHandler{
 
     }
 
-    public List<User> readObjectFromFile() {
-        users=new ArrayList<>();
+    public List<User> readUsersFromFile() {
+        users = new ArrayList<>();
         try {
             File myJsonFile = new File("src/main/resources/newsaggregator/users.txt");
             Scanner myScanner = new Scanner(myJsonFile);
             while (myScanner.hasNextLine()) {
                 String jsonData = myScanner.nextLine();
                 User user = new Gson().fromJson(jsonData, User.class);
+                if (user == null) continue;
                 users.add(user);
             }
             if (users.isEmpty()) {
@@ -54,9 +61,10 @@ public class UserDataHandler{
         }
         return users;
     }
+
     public void updateUserState() {
         if (users.isEmpty()) return;
-        for (User user :users) {
+        for (User user : users) {
             if (user.getUsername().equals(users.get(users.size() - 1).getUsername())) {
                 users.remove(user);
                 return;

@@ -1,4 +1,4 @@
-package newsaggregator.controller.dashboard.trend.trendPackage;
+package newsaggregator.controller.dashboard.trend;
 
 import java.util.ArrayList;
 import java.util.Collections;

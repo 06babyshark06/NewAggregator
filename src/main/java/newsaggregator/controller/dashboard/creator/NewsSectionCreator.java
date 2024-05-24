@@ -22,7 +22,7 @@ import java.util.List;
 public class NewsSectionCreator implements Creator {
     private final String[] options = {"Latest", "Oldest"};
     private final String[] years = {"2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017"};
-    private final String[] tags = {"AI", "Crypto", "Blockchain", "News"};
+    private final String[] tags = {"Cryptocurrency", "Crypto", "Blockchain", "News","Bitcoin","Top Stories"};
     private final double articlesPerPage;
     private ComboBox<String> sortOption;
     private ComboBox<String> sortYear;
@@ -92,11 +92,8 @@ public class NewsSectionCreator implements Creator {
     public void sort() {
         FilteredList<TableData> filter = new FilteredList<>(dataList, e -> true);
         String year = sortYear.getValue();
-        System.out.println(year);
         String tag = sortTag.getValue();
-        System.out.println(tag);
         String option = sortOption.getValue();
-        System.out.println(option);
         filter.setPredicate(tableData -> {
             if (year == null || year.equals("Year")) return true;
             else return tableData.getCreate_date().toLowerCase().contains(year.toLowerCase());

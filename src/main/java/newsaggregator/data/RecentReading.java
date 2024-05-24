@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Stack;
 
 public class RecentReading {
-    private static Stack<TableData> recentList = new Stack<>();
+    private static Stack<TableData> recentList;
     private static User user;
 
     public User getUser() {

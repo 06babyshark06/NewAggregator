@@ -1,8 +1,6 @@
-package newsaggregator.controller.dashboard.trend.trendPackage.pairPackage.pairComparator;
+package newsaggregator.controller.dashboard.trend.pairdata;
 
 import java.util.Comparator;
-
-import newsaggregator.controller.dashboard.trend.trendPackage.pairPackage.Pair;
 
 public class CompareProperty implements Comparator<Pair> {
 

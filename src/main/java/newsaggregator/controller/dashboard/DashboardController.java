@@ -9,31 +9,23 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.chart.LineChart;
-import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
-import newsaggregator.controller.dashboard.creator.HomeSectionCreator;
-import newsaggregator.controller.dashboard.creator.NewsSectionCreator;
-import newsaggregator.controller.dashboard.creator.SearchSectionCreator;
-import newsaggregator.controller.dashboard.creator.StatisticSectionCreator;
+import newsaggregator.controller.dashboard.creator.*;
 import newsaggregator.controller.dashboard.trend.TrendFinder;
-import newsaggregator.controller.dashboard.trend.trendPackage.pairPackage.Pair;
-import newsaggregator.controller.dashboard.trend.trendPackage.pairPackage.PairArray;
 import newsaggregator.data.ArticleLink;
 import newsaggregator.data.User;
-import newsaggregator.datagetter.UserDataHandler;
-import newsaggregator.datagetter.JsonDataGetter;
+import newsaggregator.data.filereader.UserDataHandler;
+import newsaggregator.data.filereader.JsonDataGetter;
 import newsaggregator.display.DragAndDropWindow;
 import newsaggregator.data.RecentReading;
 import newsaggregator.data.TableData;
-import newsaggregator.notification.ErrorNotification;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
@@ -43,6 +35,15 @@ import java.util.*;
 public class DashboardController implements Initializable {
     @FXML
     private Button aboutBtn;
+
+    @FXML
+    private Hyperlink aboutDocument;
+
+    @FXML
+    private Hyperlink aboutSrc;
+
+    @FXML
+    private Hyperlink aboutTutorial;
 
     @FXML
     private AnchorPane aboutView;
@@ -156,13 +157,14 @@ public class DashboardController implements Initializable {
     @FXML
     private Label username;
 
-    ObservableList<TableData> dataList = new JsonDataGetter().getData("src/main/resources/newsaggregator/data.json");
+    String filePath = "src/main/resources/newsaggregator/data.json";
+    ObservableList<TableData> dataList = new JsonDataGetter().getData(filePath);
     ObservableList<TableData> afterSortDataList = dataList;
     ObservableList<TitledPane> recentArticles = FXCollections.observableArrayList();
     private final double articlesPerPage = Math.ceil(dataList.size() * 1.0 / 100);
     NewsSectionCreator newsSectionCreator = null;
     StatisticSectionCreator statisticSectionCreator = null;
-    TrendFinder finder = new TrendFinder("src/main/resources/newsaggregator/data.json");
+    TrendFinder finder = new TrendFinder(filePath);
 
     private WebEngine engine;
 
@@ -177,9 +179,9 @@ public class DashboardController implements Initializable {
     public void close() {
         User user = new RecentReading().getUser();
         user.setRecentReadings(new RecentReading().setRecentReadingFromUser());
-        UserDataHandler.users.add(user);
+        UserDataHandler.getUsers().add(user);
         new UserDataHandler().updateUserState();
-        new UserDataHandler().writeObjectToFile();
+        new UserDataHandler().writeUsersToFile();
         System.exit(0);
     }
 
@@ -187,9 +189,9 @@ public class DashboardController implements Initializable {
         logoutBtn.getScene().getWindow().hide();
         User user = new RecentReading().getUser();
         user.setRecentReadings(new RecentReading().setRecentReadingFromUser());
-        UserDataHandler.users.add(user);
+        UserDataHandler.getUsers().add(user);
         new UserDataHandler().updateUserState();
-        new UserDataHandler().writeObjectToFile();
+        new UserDataHandler().writeUsersToFile();
         Parent root = FXMLLoader.load(getClass().getResource("/newsaggregator/login.fxml"));
         new DragAndDropWindow().displayStage(root, new Stage());
     }
@@ -237,13 +239,13 @@ public class DashboardController implements Initializable {
 
     // Statistics Section
     public void showStatistics() {
-        statisticSectionCreator=new StatisticSectionCreator(statisticTag,statisticSources,statisticTrend,statisticSearch,finder);
+        statisticSectionCreator = new StatisticSectionCreator(statisticTag, statisticSources, statisticTrend, statisticSearch, finder);
         statisticSectionCreator.create();
     }
 
     public void searchKeyword() {
-        String keyword=statisticSearch.getText();
-            statisticSectionCreator.showTrend(keyword);
+        String keyword = statisticSearch.getText();
+        statisticSectionCreator.showTrend(keyword);
     }
 
     // Search Section
@@ -260,6 +262,7 @@ public class DashboardController implements Initializable {
         showSearchResults();
         showRecentReading();
         showStatistics();
+        new AboutSectionCreator(aboutDocument, aboutSrc, aboutTutorial).create();
     }
 
 }
