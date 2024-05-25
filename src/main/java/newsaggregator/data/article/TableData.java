@@ -11,7 +11,7 @@ public class TableData implements Comparable<TableData> {
     private String create_date;
     private String tag;
     private String author;
-    public ArticleLink link;
+    public transient ArticleLink link;
 
     public TableData(String url, String web_url, String type, String description, String title, 
     String content, String create_date, String tag, String author) {

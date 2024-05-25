@@ -8,7 +8,6 @@ module com.example.myperfectproject {
     requires transitive json.simple;
     requires org.jsoup;
 
-
     opens newsaggregator to javafx.fxml,com.google.gson;
     exports newsaggregator;
     exports newsaggregator.controller;

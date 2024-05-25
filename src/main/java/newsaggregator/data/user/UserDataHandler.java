@@ -54,7 +54,6 @@ public class UserDataHandler {
             if (users.isEmpty()) {
                 users.add(new User("admin", "1", new ArrayList<>()));
             }
-            myScanner.close();
         } catch (FileNotFoundException e) {
             System.out.println("An error");
             new ErrorNotification().showMessage("Could not find users.txt file");
