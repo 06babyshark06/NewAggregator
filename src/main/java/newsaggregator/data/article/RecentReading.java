@@ -33,19 +33,18 @@ public class RecentReading {
 
     public void getRecentReadingFromUser(User user) {
         Stack<TableData> recent = new Stack<>();
-        List<ArticleData> list = user.getRecentReadings();
-        for (ArticleData data : list) {
-            TableData tableData = new TableData(data);
-            recent.add(tableData);
+        List<TableData> list = user.getRecentReadings();
+        for (TableData data : list) {
+            recent.add(data);
         }
         recentList = recent;
         RecentReading.user = user;
     }
 
-    public List<ArticleData> setRecentReadingFromUser() {
-        List<ArticleData> list = new ArrayList<>();
-        for (ArticleData article : recentList) {
-            list.add(new ArticleData(article.getUrl(), article.getWeb_url(), article.getType(), article.getDescription(), article.getTitle(), article.getContent(), article.getCreate_date(), article.getTag(), article.getAuthor()));
+    public List<TableData> setRecentReadingFromUser() {
+        List<TableData> list = new ArrayList<>();
+        for (TableData article : recentList) {
+            list.add(new TableData(article.getUrl(), article.getWeb_url(), article.getType(), article.getDescription(), article.getTitle(), article.getContent(), article.getCreate_date(), article.getTag(), article.getAuthor()));
         }
         return list;
     }

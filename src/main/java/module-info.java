@@ -1,12 +1,12 @@
 module com.example.myperfectproject {
-    requires javafx.controls;
-    requires javafx.fxml;
-    requires fontawesomefx;
+    requires transitive javafx.controls;
+    requires transitive javafx.fxml;
+    requires transitive fontawesomefx;
     requires com.google.gson;
     requires java.desktop;
-    requires javafx.web;
-    requires json.simple;
-
+    requires transitive javafx.web;
+    requires transitive json.simple;
+    requires org.jsoup;
 
     opens newsaggregator to javafx.fxml,com.google.gson;
     exports newsaggregator;

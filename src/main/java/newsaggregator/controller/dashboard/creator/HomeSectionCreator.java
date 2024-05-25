@@ -29,7 +29,8 @@ public class HomeSectionCreator implements Creator {
     private WebView displayArticleWebview;
     private WebEngine engine;
 
-    public HomeSectionCreator(ListView<TitledPane> homeRecentArticles, Label homeTodayReading, Label homeTotalArticles, ObservableList<TitledPane> recentArticles, ObservableList<TableData> dataList, FontAwesomeIcon displayArticleImage, WebView displayArticleWebview, WebEngine engine) {
+    public HomeSectionCreator(ListView<TitledPane> homeRecentArticles, Label homeTodayReading, Label homeTotalArticles, 
+    ObservableList<TitledPane> recentArticles, ObservableList<TableData> dataList, FontAwesomeIcon displayArticleImage, WebView displayArticleWebview, WebEngine engine) {
         this.homeRecentArticles = homeRecentArticles;
         this.homeTodayReading = homeTodayReading;
         this.homeTotalArticles = homeTotalArticles;

@@ -1,18 +1,18 @@
 package newsaggregator.data.user;
 
-import newsaggregator.data.article.ArticleData;
+import newsaggregator.data.article.TableData;
 
 import java.util.List;
 
 public class User {
     private String username;
     private String password;
-    private List<ArticleData> recentReadings;
+    private List<TableData> recentReadings;
 
     public User() {
     }
 
-    public User(String username, String password, List<ArticleData> recentReadings) {
+    public User(String username, String password, List<TableData> recentReadings) {
         this.username = username;
         this.password = password;
         this.recentReadings = recentReadings;
@@ -34,11 +34,11 @@ public class User {
         this.password = password;
     }
 
-    public List<ArticleData> getRecentReadings() {
+    public List<TableData> getRecentReadings() {
         return recentReadings;
     }
 
-    public void setRecentReadings(List<ArticleData> recentReadings) {
+    public void setRecentReadings(List<TableData> recentReadings) {
         this.recentReadings = recentReadings;
     }
 }
