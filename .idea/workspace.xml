@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e3b3622f-7fa2-404b-8e1e-e02249ad8f28" name="Changes" comment="Thank">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/InformationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/InformationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/creator/HomeSectionCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/creator/HomeSectionCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/creator/SearchSectionCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/controller/dashboard/creator/SearchSectionCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/data/article/ArticleLink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/data/article/ArticleLink.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/newsaggregator/data/article/RecentReading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newsaggregator/data/article/RecentReading.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +159,9 @@
       <workItem from="1716564838637" duration="175000" />
       <workItem from="1716565738661" duration="635000" />
       <workItem from="1716568152383" duration="389000" />
-      <workItem from="1716569701040" duration="412000" />
+      <workItem from="1716569701040" duration="1130000" />
+      <workItem from="1716607728235" duration="3138000" />
+      <workItem from="1716639424545" duration="1601000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <option name="closed" value="true" />
@@ -223,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716568518259</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Thank">
+      <option name="closed" value="true" />
+      <created>1716570123533</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716570123533</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
