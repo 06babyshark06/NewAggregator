@@ -35,8 +35,7 @@ public class JsonDataGetter implements DataGetter {
                 title = title.replace("'", "’").replace("&", "and");
                 content = content.replace("'", "’").replace("&", "and");
 
-                ArticleData data = new ArticleData(url, web_url, type, description, title, content, create_date, tag, author);
-                TableData tableData = new TableData(data);
+                TableData tableData = new TableData(url, web_url, type, description, title, content, create_date, tag, author);
                 listTableData.add(tableData);
             }
         } catch (FileNotFoundException e) {

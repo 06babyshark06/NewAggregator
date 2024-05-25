@@ -6,6 +6,7 @@ module com.example.myperfectproject {
     requires java.desktop;
     requires javafx.web;
     requires json.simple;
+    requires org.jsoup;
 
 
     opens newsaggregator to javafx.fxml,com.google.gson;
