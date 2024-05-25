@@ -15,7 +15,7 @@ public class ArticleLink extends Hyperlink {
         super("Here");
         this.setOnAction(actionEvent -> {
             try {
-                Stack<TableData> list = new RecentReading().getRecentList();
+                Stack<TableData> list = RecentReading.getRecentList();
                 Desktop.getDesktop().browse(new URI(s));
                 list.add(tableData);
                 new RecentReading().deleteDuplicated(list);

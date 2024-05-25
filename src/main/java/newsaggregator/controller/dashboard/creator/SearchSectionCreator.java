@@ -77,7 +77,7 @@ public class SearchSectionCreator implements Creator {
             row.setOnMouseClicked(mouseEvent -> {
                 if (mouseEvent.getButton() == MouseButton.PRIMARY) {
                     if (mouseEvent.getClickCount() == 2) {
-                        Stack<TableData> recentReadingList= new RecentReading().getRecentList();
+                        Stack<TableData> recentReadingList= RecentReading.getRecentList();
                         recentReadingList.push(row.getItem());
                         new RecentReading().deleteDuplicated(recentReadingList);
                         try {

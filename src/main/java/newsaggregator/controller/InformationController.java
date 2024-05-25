@@ -47,7 +47,7 @@ public class InformationController implements Initializable {
     }
 
     public void displayAllInformation() {
-        TableData data = new RecentReading().getRecentList().peek();
+        TableData data = RecentReading.getRecentList().peek();
         author.setText(data.getAuthor());
         createDate.setText(data.getCreate_date());
         description.setText(data.getDescription());
