@@ -44,6 +44,7 @@ public class SearchSectionCreator implements Creator {
         this.searchTableLink = searchTableLink;
     }
 
+    @SuppressWarnings("null")
     private void articleSearch() {
         FilteredList<TableData> filter = new FilteredList<>(dataList, e -> true);
         searchBar.textProperty().addListener((observableValue, oldValue, newValue) -> filter.setPredicate(tableData -> {

@@ -10,8 +10,6 @@ import java.util.Set;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import com.google.gson.JsonArray;
-
 public class TagRecognition {
     public static List<TrendData> webTagData = new ArrayList<>();
     private static Set<String> tagBase = new HashSet<>();
@@ -40,16 +38,10 @@ public class TagRecognition {
         Collections.addAll(fullTag, full);
 	} 
 
-    private JsonArray jsonFile;
-
-    public TagRecognition(JSONArray jsonFile){
-        tagScrapping(jsonFile);
-    }
-
     /**
      * Tìm và liệt kê các thông tin cần thiết (tag và createDate) vào webTagData
      */
-    public void tagScrapping(JSONArray jsonFile){
+    public static void tagScrapping(JSONArray jsonFile){
         Iterator<?> itr = jsonFile.iterator();
  		while (itr.hasNext()) 
 		{
@@ -92,7 +84,7 @@ public class TagRecognition {
 	 * Phân tách các nội dung trong một dãy
 	 * @param splitRegex: kí hiệu dùng làm điểm phân tách
 	 */
-	private List<String> extractWord(String paragraph,String splitRegex) {
+	private static List<String> extractWord(String paragraph,String splitRegex) {
 		List<String> listOfWord = new ArrayList<>();
         String[] words = paragraph.split(splitRegex);
         for(int i = 0; i<words.length; i++){
@@ -103,7 +95,7 @@ public class TagRecognition {
 		return listOfWord;
 	}
 
-    private List<String> filterKeyWord(List<String> list){
+    private static List<String> filterKeyWord(List<String> list){
         List<String> copyList = new ArrayList<>(list);
         for(String word : copyList){
             if(isBlockchainKeyword(word) == false){
@@ -118,7 +110,7 @@ public class TagRecognition {
      * @param word
      * @return
      */
-    public boolean isBlockchainKeyword(String word){
+    public static boolean isBlockchainKeyword(String word){
         if(word.matches("\\w*[A-Z]\\w*[A-Z]\\w*")){
             return true;
         }
@@ -139,7 +131,7 @@ public class TagRecognition {
 	 * Lọc và chỉnh sửa các từ 
 	 * @param word
 	 */
-	private String polishWord(String word) {
+	private static String polishWord(String word) {
 		if(word.isEmpty()) return "";
         word = word.replaceAll("^[?'’,._:)(!# \\-\"]+", ""); //Lọc dấu đằng trước
         word = word.replaceAll("[?'’,._:)(!#\\-\"]+.*", ""); //Lọc dấu đằng sau

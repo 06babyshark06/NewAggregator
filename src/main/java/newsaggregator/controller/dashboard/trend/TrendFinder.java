@@ -15,7 +15,6 @@ public class TrendFinder {
     private String outputFile;
     private DataExtract extractor;
     private TimeDisplay timeDisplayer;
-    private TagRecognition tagScraper;
 
     public TrendFinder(String outputFile) throws FileNotFoundException, IOException, ParseException {
         //Khởi tạo
@@ -23,7 +22,7 @@ public class TrendFinder {
         Object object = new JSONParser().parse(new FileReader(this.outputFile));
         JSONArray jsonArray = (JSONArray) object;  //Lấy dữ liệu từ file Json
         this.extractor = new DataExtract(jsonArray);
-        this.tagScraper = new TagRecognition(jsonArray);
+        TagRecognition.tagScrapping(jsonArray);
     }
 
     public PairArray trendOverTime(String locateWord, int yearSpan) {
