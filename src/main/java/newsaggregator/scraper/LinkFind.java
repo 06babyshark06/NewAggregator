@@ -15,7 +15,7 @@ import java.util.Stack;
 
 public class LinkFind {
 	private String homePageURL;
-    private String outputFilePath = "Data/url.txt";
+    private String outputFilePath = "src/main/resources/newsaggregator/url.txt";
 	public LinkFind(String homePageURL) {
 		this.homePageURL = homePageURL;
 	}
@@ -72,7 +72,10 @@ public class LinkFind {
                             // Kiểm tra điều kiện của Url (<<<<<<<<<<<< Mày thêm bộ lọc chỗ này >>>>>>>>>>>>>>)
                             // Lấy Root Url của phần tử
                             String absUrl = link.absUrl("href");
-                           if (absUrl.contains("/page")||absUrl.contains("/privacy")||absUrl.contains("/contact")||absUrl.contains("/about")||absUrl.contains("/cookie")||absUrl.contains("/tag")||absUrl.contains("/auth")||absUrl.contains("/adv")||absUrl.contains("/accessibility")||absUrl.contains("/policy")) continue;
+                           if (absUrl.contains("/page")||absUrl.contains("/privacy")||absUrl.contains("/contact")
+                           ||absUrl.contains("/about")||absUrl.contains("/cookie")||absUrl.contains("/tag")
+                           ||absUrl.contains("/auth")||absUrl.contains("/adv")||absUrl.contains("/accessibility")
+                           ||absUrl.contains("/policy")||absUrl.contains("#")) continue;
                             // Đẩy Root Url vào stack
                            else stack.push(absUrl);
                         }

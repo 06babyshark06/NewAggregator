@@ -35,6 +35,8 @@ public class JsonDataGetter implements DataGetter {
                 title = title.replace("'", "’").replace("&", "and");
                 content = content.replace("'", "’").replace("&", "and");
 
+                if(!create_date.isEmpty() && create_date != null) create_date = create_date.substring(0, 10);
+
                 TableData tableData = new TableData(url, web_url, type, description, title, content, create_date, tag, author);
                 listTableData.add(tableData);
             }
