@@ -14,6 +14,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import newsaggregator.data.article.TableData;
 
@@ -38,43 +39,38 @@ public class Datascraper {
                 String web_url = url.substring(0, url.indexOf(".com")+5);
                 Elements type = doc.select("meta[property $= og:type]");
                 Elements description = doc.select("meta[name = description]");
-                String title = doc.title();  
+                Elements title = doc.select("meta[property $=title]");  
                 Elements contents = doc.select("div#maincontent p, article.fck_detail p, section.at-body p");
-                Elements author = doc.select("meta[property $= author]");
-                Elements create_date = doc.select("meta[property $= published_time]");
-                Elements tag = doc.select("meta[property $= tag]");
+                Elements author = doc.select("meta[property $= author],meta[name $=author]");
+                Elements create_date = doc.select("meta[property $= published_time], meta[name $= datePublished]");
+                Elements tag = doc.select("meta[property $= tag],meta[name $= keywords]");
                 
-                // Tạo đối tượng String lưu từng phần của content
-                List<String> contentList = new ArrayList<>();
-                
-                for (Element content : contents)
-                    contentList.add(content.text());
-                
-                // Tạo đối tượng ScrapedData và đẩy vào dataList 
-                TableData data = new TableData(url, web_url, type.attr("content"), description.attr("content"), title,  contents.attr("content"), create_date.attr("content"), tag.attr("content"), author.attr("content"));
-                dataList.add(data);
+               // Tạo đối tượng String lưu từng phần của content
+               String contentText = " ";
+               for (Element content: contents){
+                   contentText = contentText.concat(content.text()+"\n");
+               }
+               // Tạo đối tượng ScrapedData và đẩy vào dataList 
+               TableData data = new TableData(url, web_url, type.attr("content"), description.attr("content"), title.attr("content"),  contentText, create_date.attr("content"), tag.attr("content"), author.attr("content"));
+               dataList.add(data);
             }
             
             reader.close();
 
-            Gson gson = new Gson();
-            String jsonData = gson.toJson(dataList);
+            Gson gson = new GsonBuilder().disableHtmlEscaping().create();
 
             // Tạo kết nối viết với file Output.json 
             BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath));
-
-//            for (ScrapeData Data : dataList) {
+            writer.write("[");
+            for (TableData Data : dataList) {
                 // Chuyển từng phần tử Data trong dataList thành JSON
-//                String jsonData = gson.toJson(Data);
-
+                String jsonData = gson.toJson(Data);
                 writer.write(jsonData);
-//                writer.newLine(); // Xuống dòng
-//            }
-            writer.close();
-            
-            
-           
-            
+                if (dataList.get(dataList.size() -1) != Data) writer.write(",");
+                writer.newLine(); // Xuống dòng
+            }
+            writer.write("]");
+            writer.close();  
             System.out.println("Scraping completed: " + outputFilePath);
         } catch (IOException e) {
             System.out.println("Program failed to send HTTP request due to internet loss");
