@@ -59,7 +59,7 @@ public class TagRecognition {
             paragraph.append(jsonObject.get("description"));
             for(String keyWord : fullTag){
                 if(paragraph.toString().toLowerCase().contains(keyWord)){
-                    keyWord = DataExtract.upperCaseFirst(keyWord);
+                    keyWord = upperCaseFirst(keyWord);
                     listOfTag.add(keyWord); //Tìm từ dãy có sẵn
                 }
             }
@@ -69,7 +69,7 @@ public class TagRecognition {
                 if(word == null || word == "") continue;
                 if(isBlockchainKeyword(word) == true){
                     //Từ có 2 chữ viết hoa chở lên, có thể là từ khóa, cho vào tag
-                    word = DataExtract.upperCaseFirst(word);
+                    word = upperCaseFirst(word);
                     listOfTag.add(word);
                 }
             }
@@ -89,7 +89,7 @@ public class TagRecognition {
         String[] words = paragraph.split(splitRegex);
         for(int i = 0; i<words.length; i++){
             //Lọc các dấu thừa ra trong từ
-            words[i] = polishWord(words[i]);
+            words[i] = upperCaseFirst(polishWord(words[i]));
         }
         Collections.addAll(listOfWord, words);
 		return listOfWord;
@@ -138,6 +138,24 @@ public class TagRecognition {
         word = word.replaceAll("[ ]$", ""); //Nhỡ có dấu cách đằng cuối
 		return word;
 		
+	} 
+    	/**
+	 * Viết hoa các từ đầu chữ
+	 * @param word
+	 * @return
+	 */
+	public static String upperCaseFirst(String word){
+		String[] letterList = word.split("[ ]");
+		StringBuilder newWord = new StringBuilder();
+		for(String letter : letterList){
+			//Đi từng chữ và viết hoa chữ đầu
+            if(!letter.matches(".*\\w.*")) continue;
+			newWord.append(letter.substring(0, 1).toUpperCase()
+			.concat(letter.substring(1)));
+			newWord.append(" ");
+		}
+        if(!newWord.isEmpty()) newWord.setLength(newWord.length()-1);
+		return newWord.toString();
 	}
 	
 }

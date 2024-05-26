@@ -85,24 +85,4 @@ public class DataExtract {
         }
         return wordAppearance;
     }
-
-    /**
-     * Viết hoa các từ đầu chữ
-     *
-     * @param word
-     * @return
-     */
-    public static String upperCaseFirst(String word) {
-        String[] letterList = word.split("[ ]");
-        StringBuilder newWord = new StringBuilder();
-        for (String letter : letterList) {
-            //Đi từng chữ và viết hoa chữ đầu
-            newWord.append(letter.substring(0, 1).toUpperCase()
-                    .concat(letter.substring(1)));
-            newWord.append(" ");
-        }
-        newWord.setLength(newWord.length() - 1);
-        return newWord.toString();
-    }
-
 }
