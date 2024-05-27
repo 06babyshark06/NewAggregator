@@ -315,7 +315,7 @@
                                     </Label>
                                     <Hyperlink fx:id="aboutTutorial" layoutX="143.0" layoutY="266.0" text="https://www.youtube.com/watch?v=ap3nn-qcdv0" />
                                     <Hyperlink fx:id="aboutSrc" layoutX="189.0" layoutY="313.0" text="https://github.com/06babyshark06/NewAggregator" />
-                                    <Hyperlink fx:id="aboutDocument" layoutX="179.0" layoutY="361.0" text="https://www.youtube.com/watch?v=XomtE5GeBL8" />
+                                    <Hyperlink fx:id="aboutDocument" layoutX="179.0" layoutY="361.0" text="https://drive.google.com/drive/folders/1nVCGH4XIc0maVV4dImAGLJA5P2j-VkCy?usp=sharing" />
                                  </children>
                                  <styleClass>
                                     <String fx:value="white-bg" />
